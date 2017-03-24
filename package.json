@@ -1,0 +1,39 @@
+{
+  "name": "geocodecode-king",
+  "version": "0.1.0",
+  "description": "Geocoding bad assery in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "rm -rf lib && mkdir lib && npm run generate",
+    "generate": "babel -d lib src"
+  },
+  "author": "emojikingjs@gmail.com",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "latest"
+    ],
+    "plugins": [
+      [
+        "transform-object-rest-spread",
+        {
+          "useBuiltIns": true
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/emoji-king/geocode-king"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "mz": "^2.6.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "superagent-bluebird-promise": "^4.2.0"
+  }
+}
